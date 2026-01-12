@@ -55,4 +55,77 @@ Intent detection is implemented using **lightweight keyword-based logic** to ens
 
 - The agent retrieves answers **only from a local knowledge base**
 - Knowledge is stored in:
+- 
+- Responses are grounded in predefined product information and company policies
+
+This follows the **Retrieval-Augmented Generation (RAG)** concept using **local data** instead of an external LLM.
+
+---
+
+### 3. Offline & Deterministic Execution
+
+- No external APIs  
+- No API keys required  
+- No billing  
+- Fully offline execution  
+
+This guarantees **consistent output** and avoids hallucinations.
+
+---
+
+## 📂 Project Structure
+
+autostream-agent/
+│
+├── app/
+│ ├── init.py
+│ └── main.py
+│
+├── data/
+│ └── knowledge.md
+│
+├── requirements.txt
+└── README.md
+
+---
+
+## 🛠️ Tech Stack
+
+- **Language:** Python 3.9+  
+- **Interface:** Command Line (CLI)  
+- **Knowledge Source:** Local Markdown file  
+- **Dependencies:** None (lightweight by design)
+
+---
+
+## ▶️ How to Run the Project Locally
+
+### 1️⃣ Create and Activate Environment (Recommended)
+
+```bash
+conda create -n autostream_clean python=3.10 -y
+conda activate autostream_clean
+2️⃣ Navigate to Project Folder
+cd Desktop/autostream-agent
+
+3️⃣ Install Requirements
+pip install -r requirements.txt
+
+4️⃣ Run the Agent
+python -m app.main
+
+5️⃣ Example Queries
+hi
+tell me about pricing
+what features does autostream have
+does autostream support youtube
+what is the refund policy
+
+
+To exit:
+
+exit
+
+
+
 
